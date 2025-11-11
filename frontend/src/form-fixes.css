@@ -1,0 +1,64 @@
+/* Form fixes to ensure inputs are clickable */
+input, select, textarea, button {
+  position: relative;
+  z-index: 30 !important;
+}
+
+/* Fix for any horizontal lines that might be causing issues */
+.horizontal-line-fix {
+  position: relative;
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* Ensure content is always above any potential overlays */
+main {
+  position: relative;
+  z-index: 10;
+}
+
+/* Fix for any potential overflow issues */
+.overflow-fix {
+  overflow: visible !important;
+}
+
+/* Fix for any potential height constraints */
+.min-h-screen {
+  min-height: 100vh;
+  height: auto !important;
+}
+
+/* Fix for any potential absolute positioning issues */
+.absolute-fix {
+  position: static !important;
+}
+
+/* Fix for dropdown menus to ensure they're clickable */
+.dropdown-menu-fix {
+  position: relative;
+  z-index: 1000 !important;
+  pointer-events: auto !important;
+}
+
+/* Fix for dropdown menu items */
+.dropdown-menu-fix a,
+.dropdown-menu-fix button {
+  position: relative;
+  z-index: 1001 !important;
+  pointer-events: auto !important;
+}
+
+/* Fix for navbar dropdown */
+.navbar-dropdown {
+  position: absolute !important;
+  z-index: 1000 !important;
+}
+
+/* Fix for profile edit button to ensure it's always clickable */
+button[class*="profile-edit-button"],
+a[class*="profile-edit-button"] {
+  position: relative !important;
+  z-index: 1050 !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}

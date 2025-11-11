@@ -1,0 +1,224 @@
+/* Auth Forms Dark Theme - Modern Professional UI */
+
+/* Base dark theme colors */
+:root {
+  --auth-dark-bg-primary: #111827;
+  --auth-dark-bg-secondary: #1f2937;
+  --auth-dark-bg-tertiary: #374151;
+  --auth-dark-text-primary: #f9fafb;
+  --auth-dark-text-secondary: #e5e7eb;
+  --auth-dark-text-muted: #9ca3af;
+  --auth-dark-border: #4b5563;
+
+  /* Accent colors */
+  --auth-accent-blue: #3b82f6;
+  --auth-accent-blue-dark: #2563eb;
+  --auth-accent-green: #10b981;
+  --auth-accent-yellow: #f59e0b;
+  --auth-accent-red: #ef4444;
+  --auth-accent-purple: #8b5cf6;
+
+  /* Gradients */
+  --auth-gradient-blue: linear-gradient(135deg, #3b82f6, #2563eb);
+  --auth-gradient-green: linear-gradient(135deg, #10b981, #059669);
+  --auth-gradient-yellow: linear-gradient(135deg, #f59e0b, #d97706);
+  --auth-gradient-red: linear-gradient(135deg, #ef4444, #dc2626);
+  --auth-gradient-purple: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+
+/* Apply dark theme styles when data-theme="dark" is set */
+html[data-theme='dark'] .min-h-screen.flex.items-center.justify-center.bg-gray-50 {
+  background-color: #1e293b; /* Dark blue background from screenshot */
+  background-image: none;
+}
+
+/* Auth container */
+html[data-theme='dark'] .max-w-md.w-full.space-y-8 {
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+  padding: 2rem;
+  box-shadow: none;
+}
+
+/* Auth headings */
+html[data-theme='dark'] .mt-6.text-center.text-3xl.font-extrabold.text-gray-900 {
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  margin-bottom: 2.5rem;
+  font-size: 2rem;
+}
+
+/* Auth subtext */
+html[data-theme='dark'] .mt-2.text-center.text-sm.text-gray-600 {
+  color: var(--auth-dark-text-secondary);
+}
+
+/* Form inputs */
+html[data-theme='dark'] .floating-input-container .floating-input {
+  background-color: #1e293b; /* Match the background */
+  border: 1px solid #3b4a63; /* Subtle border color from screenshot */
+  border-radius: 0.375rem;
+  color: white !important; /* Force white text color */
+  transition: all 0.3s ease;
+  caret-color: white; /* Make cursor visible */
+  height: 3.5rem; /* Taller input fields as in screenshot */
+  font-size: 1rem;
+  padding: 1rem 1rem; /* Even padding for centered text */
+}
+
+html[data-theme='dark'] .floating-input-container .floating-input::placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+  opacity: 1 !important;
+}
+
+/* Ensure label is visible in dark mode */
+html[data-theme='dark'] .floating-input-container label {
+  display: block !important;
+}
+
+html[data-theme='dark'] .floating-input-container .floating-input:focus {
+  border-color: #3b82f6;
+  box-shadow: none; /* Remove glow effect */
+  background-color: #1e293b; /* Keep the same background when focused */
+}
+
+/* Input labels */
+html[data-theme='dark'] .floating-input-container label {
+  color: #60a5fa !important; /* Light blue color for better visibility */
+  font-size: 1rem;
+}
+
+/* Floating label styling when active */
+html[data-theme='dark'] .floating-input-container label[class*="-top-"] {
+  background-color: #1e293b !important; /* Match background color */
+  padding: 0 4px !important;
+  color: #60a5fa !important; /* Light blue color for active label */
+  font-size: 0.875rem !important;
+}
+
+html[data-theme='dark'] .floating-input-container .floating-input:focus ~ label,
+html[data-theme='dark'] .floating-input-container .floating-input:not(:placeholder-shown) ~ label {
+  color: #60a5fa !important; /* Light blue color for active label */
+  background-color: #1e293b !important; /* Match background color */
+}
+
+/* Remember me checkbox */
+html[data-theme='dark'] .h-4.w-4.text-blue-600 {
+  color: #3b82f6;
+  border-color: #3b4a63;
+  background-color: #1e293b;
+}
+
+html[data-theme='dark'] .ml-2.block.text-sm.text-gray-900 {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Forgot password link */
+html[data-theme='dark'] .font-medium.text-blue-600.hover\:text-blue-500 {
+  color: #3b82f6;
+  transition: color 0.2s ease;
+}
+
+html[data-theme='dark'] .font-medium.text-blue-600.hover\:text-blue-500:hover {
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+/* Sign in button */
+html[data-theme='dark'] .group.relative.w-full.flex.justify-center.py-2.px-4.border.border-transparent.text-sm.font-medium.rounded-md.text-white.bg-blue-600,
+html[data-theme='dark'] button[type="submit"] {
+  background-color: #3b82f6; /* Solid blue color from screenshot */
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  border-radius: 0.375rem;
+  height: 3.5rem; /* Match height with inputs */
+  box-shadow: none;
+  transition: all 0.3s ease;
+}
+
+html[data-theme='dark'] .group.relative.w-full.flex.justify-center.py-2.px-4.border.border-transparent.text-sm.font-medium.rounded-md.text-white.bg-blue-600:hover,
+html[data-theme='dark'] button[type="submit"]:hover {
+  background-color: #2563eb; /* Darker blue on hover */
+  box-shadow: none;
+  transform: none;
+}
+
+html[data-theme='dark'] .group.relative.w-full.flex.justify-center.py-2.px-4.border.border-transparent.text-sm.font-medium.rounded-md.text-white.bg-blue-600:focus,
+html[data-theme='dark'] button[type="submit"]:focus {
+  outline: none;
+  box-shadow: none;
+  background-color: #2563eb;
+}
+
+/* Error messages */
+html[data-theme='dark'] .bg-red-50.border-l-4.border-red-500.p-4 {
+  background-color: rgba(239, 68, 68, 0.1);
+  border-color: var(--auth-accent-red);
+}
+
+html[data-theme='dark'] .text-sm.text-red-700 {
+  color: #fca5a5;
+}
+
+/* Loading spinner */
+html[data-theme='dark'] .animate-spin.-ml-1.mr-3.h-5.w-5.text-white {
+  color: white;
+}
+
+/* Specific styling for the login form inputs based on the screenshot */
+html[data-theme='dark'] .floating-input-container .floating-input {
+  background-color: #1f2937;
+  border-radius: 0.5rem;
+  height: 3.5rem;
+  font-size: 1rem;
+}
+
+html[data-theme='dark'] .floating-input-container label {
+  font-size: 1rem;
+}
+
+/* Remember me checkbox container */
+html[data-theme='dark'] .flex.items-center.justify-between {
+  margin-top: 1rem;
+}
+
+/* Sign in button specific styling */
+html[data-theme='dark'] button[type="submit"] {
+  margin-top: 1.5rem;
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  background: var(--auth-gradient-blue);
+  transition: all 0.3s ease;
+}
+
+html[data-theme='dark'] button[type="submit"]:hover {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+}
+
+/* Password reset info box */
+html[data-theme='dark'] .bg-yellow-50.border-l-4.border-yellow-500.p-4 {
+  background-color: rgba(245, 158, 11, 0.1);
+  border-color: var(--auth-accent-yellow);
+}
+
+html[data-theme='dark'] .text-sm.text-yellow-700 {
+  color: #fcd34d;
+}
+
+/* Success messages */
+html[data-theme='dark'] .bg-green-50.border-l-4.border-green-500.p-4 {
+  background-color: rgba(16, 185, 129, 0.1);
+  border-color: var(--auth-accent-green);
+}
+
+html[data-theme='dark'] .text-sm.text-green-700 {
+  color: #6ee7b7;
+}

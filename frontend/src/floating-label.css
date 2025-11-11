@@ -1,0 +1,105 @@
+/* Floating Label Input Styles */
+
+/* Container for the floating label input */
+.floating-input-container {
+  @apply mb-6 relative;
+}
+
+/* Base input styling */
+.floating-input {
+  @apply w-full px-4 py-3 text-school-navy-dark bg-transparent;
+  @apply border border-gray-300 rounded-md transition-all duration-200;
+  @apply focus:border-green-500 focus:outline-none;
+}
+
+/* When input is focused, add a glow effect */
+.floating-input:focus {
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.2);
+}
+
+/* Remove default browser outline */
+.floating-input:focus {
+  outline: none;
+}
+
+/* Style for the floating label */
+.floating-input-container label {
+  @apply transition-all duration-200 transform;
+  @apply text-gray-500;
+}
+
+/* Dark mode label styling when not focused */
+html[data-theme='dark'] .floating-input-container label {
+  color: #60a5fa !important;
+}
+
+/* When input is focused or has value, float the label */
+.floating-input:focus ~ label,
+.floating-input:not(:placeholder-shown) ~ label {
+  @apply text-sm text-green-500 -translate-y-6 -translate-x-1 scale-90;
+  @apply bg-white px-1;
+  top: 0;
+  left: 12px;
+}
+
+/* Override label background in dark mode */
+html[data-theme='dark'] .floating-input:focus ~ label,
+html[data-theme='dark'] .floating-input:not(:placeholder-shown) ~ label {
+  background-color: #1e293b !important;
+  color: #60a5fa !important;
+  top: -0.5rem !important;
+  left: 0.75rem !important;
+}
+
+/* Add a green border when input is focused */
+.floating-input:focus {
+  @apply border-green-500;
+}
+
+/* Add a green line when input is focused */
+.floating-input:focus ~ .floating-line {
+  @apply border-green-500 w-full;
+}
+
+/* Animation for the focus effect */
+@keyframes float-label {
+  0% {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  100% {
+    top: 0;
+    transform: translateY(-50%) scale(0.9);
+  }
+}
+
+/* Ensure the floating effect works with autofill */
+.floating-input:-webkit-autofill ~ label {
+  @apply text-sm text-green-500 -translate-y-6 -translate-x-1 scale-90;
+  @apply bg-white px-1;
+  top: 0;
+  left: 12px;
+}
+
+/* Ensure the floating effect works with autofill in dark mode */
+@media (prefers-color-scheme: dark) {
+  .floating-input:-webkit-autofill ~ label {
+    @apply bg-gray-800;
+  }
+}
+
+/* Override autofill styles in dark mode */
+html[data-theme='dark'] .floating-input:-webkit-autofill,
+html[data-theme='dark'] .floating-input:-webkit-autofill:hover,
+html[data-theme='dark'] .floating-input:-webkit-autofill:focus {
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px #1e293b inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+html[data-theme='dark'] .floating-input:-webkit-autofill ~ label {
+  background-color: #1e293b !important;
+  color: #60a5fa !important;
+  top: -0.5rem !important;
+  left: 0.75rem !important;
+}

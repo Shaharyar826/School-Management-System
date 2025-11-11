@@ -1,0 +1,361 @@
+/* Dark Theme CSS for School Management System */
+
+/* Apply dark theme styles when data-theme="dark" is set on the html element */
+html[data-theme='dark'] {
+  /* Base Styles */
+  --bg-primary: #121212;
+  --bg-secondary: #1e1e1e;
+  --bg-tertiary: #2d2d2d;
+  --text-primary: #e0e0e0;
+  --text-secondary: #a0a0a0;
+  --border-color: #3a3a3a;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+
+  /* Card colors */
+  --card-bg: #1e1e1e;
+  --card-header: #2d2d2d;
+  --card-border: #3a3a3a;
+
+  /* Accent colors */
+  --accent-blue: #3b82f6;
+  --accent-green: #10b981;
+  --accent-yellow: #f59e0b;
+  --accent-red: #ef4444;
+  --accent-purple: #8b5cf6;
+
+  /* Override base styles */
+  color-scheme: dark;
+}
+
+/* Base Styles */
+html[data-theme='dark'] body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  background-image: linear-gradient(to bottom, #121212, #1a1a1a);
+}
+
+/* Navbar Styles */
+html[data-theme='dark'] .school-navbar {
+  @apply bg-gradient-to-r from-school-navy to-school-navy-dark shadow-md;
+}
+
+html[data-theme='dark'] .school-navbar-brand {
+  @apply text-white;
+}
+
+html[data-theme='dark'] .school-navbar-link {
+  @apply text-gray-300 hover:text-white;
+}
+
+/* Fix for username text in dark mode */
+html[data-theme='dark'] .text-school-navy-dark {
+  @apply text-white;
+}
+
+/* Fix for username container in dark mode */
+html[data-theme='dark'] .bg-school-navy-dark.bg-opacity-10 {
+  @apply bg-gray-700 bg-opacity-100;
+}
+
+/* Sidebar Styles */
+html[data-theme='dark'] .school-sidebar {
+  @apply bg-school-navy-dark;
+}
+
+html[data-theme='dark'] .school-sidebar-item-active {
+  @apply bg-school-yellow text-school-navy-dark;
+}
+
+html[data-theme='dark'] .school-sidebar-item-inactive {
+  @apply hover:bg-school-navy text-gray-300;
+}
+
+/* Content Area Styles */
+html[data-theme='dark'] .school-content {
+  @apply bg-gray-800 shadow-md;
+  color: var(--text-primary);
+}
+
+html[data-theme='dark'] .school-heading {
+  @apply text-white;
+}
+
+html[data-theme='dark'] .school-subheading {
+  @apply text-gray-300;
+}
+
+html[data-theme='dark'] .school-text {
+  @apply text-gray-400;
+}
+
+/* Welcome message section */
+html[data-theme='dark'] .mt-4.bg-white.shadow.rounded-lg.p-6 {
+  background: linear-gradient(to right, #2d3748, #1a202c);
+  @apply border border-gray-700 shadow-lg;
+}
+
+/* Dashboard section headers */
+html[data-theme='dark'] h3.text-lg.font-medium.text-gray-900 {
+  @apply text-white border-b border-gray-700 pb-2 mb-4;
+}
+
+/* Dashboard layout improvements */
+html[data-theme='dark'] .py-6 {
+  @apply py-8;
+}
+
+html[data-theme='dark'] .mt-6 {
+  @apply mt-8;
+}
+
+/* Dashboard card hover effects */
+html[data-theme='dark'] .bg-white.overflow-hidden.shadow.rounded-lg:hover {
+  @apply bg-gray-750;
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Button Styles */
+html[data-theme='dark'] .school-button-primary {
+  @apply bg-school-yellow text-school-navy-dark hover:bg-school-yellow-dark;
+}
+
+html[data-theme='dark'] .school-button-secondary {
+  @apply bg-school-navy-light text-white hover:bg-school-navy;
+}
+
+html[data-theme='dark'] .school-button-outline {
+  @apply border border-school-yellow text-school-yellow hover:bg-school-yellow hover:text-school-navy-dark;
+}
+
+/* Input Field Styles */
+html[data-theme='dark'] .school-input {
+  @apply bg-gray-700 border-gray-600 text-white placeholder-gray-400;
+}
+
+html[data-theme='dark'] .school-input-label {
+  @apply text-gray-300;
+}
+
+/* Card Styles */
+html[data-theme='dark'] .school-card {
+  @apply bg-gray-800 border-gray-700;
+}
+
+html[data-theme='dark'] .school-card-header {
+  @apply bg-gray-700 border-gray-600;
+}
+
+html[data-theme='dark'] .school-card-footer {
+  @apply bg-gray-700 border-gray-600;
+}
+
+/* Table Styles */
+html[data-theme='dark'] .school-table-header {
+  @apply bg-gray-700;
+}
+
+html[data-theme='dark'] .school-table-header-cell {
+  @apply text-gray-300;
+}
+
+html[data-theme='dark'] .school-table-row {
+  @apply bg-gray-800 hover:bg-gray-700;
+}
+
+html[data-theme='dark'] .school-table-cell {
+  @apply text-gray-300;
+}
+
+/* Form Elements */
+html[data-theme='dark'] input,
+html[data-theme='dark'] select,
+html[data-theme='dark'] textarea {
+  @apply bg-gray-700 border-gray-600 text-white;
+}
+
+html[data-theme='dark'] input:focus,
+html[data-theme='dark'] select:focus,
+html[data-theme='dark'] textarea:focus {
+  @apply border-school-yellow;
+  box-shadow: 0 0 0 4px rgba(255, 204, 0, 0.2);
+}
+
+/* Custom Scrollbar */
+html[data-theme='dark'] ::-webkit-scrollbar-track {
+  @apply bg-gray-700;
+}
+
+html[data-theme='dark'] ::-webkit-scrollbar-thumb {
+  @apply bg-gray-500 rounded-full;
+}
+
+html[data-theme='dark'] ::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400;
+}
+
+/* Modal Styles */
+html[data-theme='dark'] .modal-content {
+  @apply bg-gray-800 border-gray-700;
+}
+
+html[data-theme='dark'] .modal-header {
+  @apply border-gray-700;
+}
+
+html[data-theme='dark'] .modal-footer {
+  @apply border-gray-700;
+}
+
+/* Toast Notifications */
+html[data-theme='dark'] .Toastify__toast {
+  @apply bg-gray-800 text-white;
+}
+
+/* Dashboard Cards and Content */
+html[data-theme='dark'] .dashboard-card,
+html[data-theme='dark'] .bg-white.overflow-hidden.shadow.rounded-lg,
+html[data-theme='dark'] .bg-white.overflow-hiddern.shadow.rounded-lg.p-5 {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+html[data-theme='dark'] .bg-white.overflow-hidden.shadow.rounded-lg:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+html[data-theme='dark'] .dashboard-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+html[data-theme='dark'] .dashboard-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+html[data-theme='dark'] .dashboard-card-header {
+  background-color: var(--card-header);
+  border-top: 1px solid var(--card-border);
+}
+
+/* Dashboard card headers and footers */
+html[data-theme='dark'] .bg-gray-50.px-5.py-3 {
+  background-color: var(--card-header);
+  border-top: 1px solid var(--card-border);
+}
+
+/* Dashboard card icons with gradient backgrounds */
+html[data-theme='dark'] .flex-shrink-0.bg-blue-500.rounded-md.p-3 {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  box-shadow: 0 4px 6px rgba(37, 99, 235, 0.3);
+}
+
+html[data-theme='dark'] .flex-shrink-0.bg-green-500.rounded-md.p-3 {
+  background: linear-gradient(135deg, #10b981, #059669);
+  box-shadow: 0 4px 6px rgba(5, 150, 105, 0.3);
+}
+
+html[data-theme='dark'] .flex-shrink-0.bg-yellow-500.rounded-md.p-3 {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  box-shadow: 0 4px 6px rgba(217, 119, 6, 0.3);
+}
+
+html[data-theme='dark'] .flex-shrink-0.bg-red-500.rounded-md.p-3 {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  box-shadow: 0 4px 6px rgba(220, 38, 38, 0.3);
+}
+
+html[data-theme='dark'] .flex-shrink-0.bg-purple-500.rounded-md.p-3 {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+  box-shadow: 0 4px 6px rgba(124, 58, 237, 0.3);
+}
+
+/* Add subtle animation to icons */
+html[data-theme='dark'] .flex-shrink-0 svg {
+  transition: transform 0.3s ease;
+}
+
+html[data-theme='dark'] .bg-white.overflow-hidden.shadow.rounded-lg:hover .flex-shrink-0 svg {
+  transform: scale(1.1);
+}
+
+/* Dashboard text colors */
+html[data-theme='dark'] .text-gray-900 {
+  @apply text-white;
+}
+
+html[data-theme='dark'] .text-gray-500 {
+  @apply text-gray-300;
+}
+
+/* Dashboard links */
+html[data-theme='dark'] .text-blue-600 {
+  @apply text-blue-400;
+}
+
+html[data-theme='dark'] .text-blue-600:hover {
+  @apply text-blue-300;
+}
+
+/* Footer */
+html[data-theme='dark'] .school-footer {
+  @apply bg-school-navy-dark;
+}
+
+/* Dropdown Menus */
+html[data-theme='dark'] .dropdown-menu,
+html[data-theme='dark'] .navbar-dropdown {
+  @apply bg-gray-800 border-gray-700;
+}
+
+html[data-theme='dark'] .dropdown-item,
+html[data-theme='dark'] .dropdown-menu-fix {
+  @apply text-gray-300 hover:bg-gray-700;
+}
+
+html[data-theme='dark'] .text-gray-700 {
+  @apply text-gray-300;
+}
+
+/* Fix for mobile menu text */
+html[data-theme='dark'] .border-transparent.text-school-navy-dark {
+  @apply text-gray-300;
+}
+
+/* Fix for mobile menu user info */
+html[data-theme='dark'] .pt-4.pb-3.border-t.border-school-navy-light {
+  @apply border-gray-700;
+}
+
+html[data-theme='dark'] .text-base.font-medium.text-school-navy-dark,
+html[data-theme='dark'] .text-sm.font-medium.text-school-navy {
+  @apply text-white;
+}
+
+/* Override React Toastify */
+html[data-theme='dark'] .Toastify__toast-container {
+  @apply text-white;
+}
+
+html[data-theme='dark'] .Toastify__toast--success {
+  @apply bg-green-800;
+}
+
+html[data-theme='dark'] .Toastify__toast--error {
+  @apply bg-red-800;
+}
+
+html[data-theme='dark'] .Toastify__toast--warning {
+  @apply bg-yellow-800;
+}
+
+html[data-theme='dark'] .Toastify__toast--info {
+  @apply bg-blue-800;
+}

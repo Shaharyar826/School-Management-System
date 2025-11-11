@@ -1,0 +1,67 @@
+{
+  "name": "frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "tunnel": "node localtunnel.js",
+    "dev:tunnel": "cross-env USE_TUNNEL=true concurrently \"vite --host 0.0.0.0\" \"npm run tunnel\"",
+    "ngrok": "node ngrok.js",
+    "dev:ngrok": "cross-env USE_TUNNEL=true concurrently \"vite --host 0.0.0.0\" \"npm run ngrok\"",
+    "dev:expose": "vite --host 0.0.0.0",
+    "network-info": "node local-network.js",
+    "dev:local-network": "concurrently \"npm run dev:expose\" \"npm run network-info\"",
+    "dev:static": "cross-env USE_TUNNEL=true vite --host 0.0.0.0 --mode production",
+    "static-server": "node static-server.js",
+    "build-and-serve": "npm run build && npm run static-server",
+    "share:static": "npm run build && concurrently \"npm run static-server\" \"npm run tunnel\""
+  },
+  "dependencies": {
+    "@headlessui/react": "^2.2.3",
+    "@tanstack/react-query": "^5.59.0",
+    "@tanstack/react-query-devtools": "^5.59.0",
+    "@tinymce/tinymce-react": "^6.1.0",
+    "axios": "^1.9.0",
+    "chart.js": "^4.4.9",
+    "cloudinary-react": "^1.8.1",
+    "date-fns": "^4.1.0",
+    "jspdf": "^3.0.1",
+    "pdfjs-dist": "^5.2.133",
+    "prop-types": "^15.8.1",
+    "react": "^19.0.0",
+    "react-chartjs-2": "^5.3.0",
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^7.5.3",
+    "react-toastify": "^11.0.5"
+  },
+  "overrides": {
+    "cloudinary-react": {
+      "react": "$react",
+      "react-dom": "$react-dom"
+    }
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.22.0",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.16",
+    "chalk": "^4.1.2",
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "eslint": "^9.22.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^16.0.0",
+    "localtunnel": "^2.0.2",
+    "ngrok": "^5.0.0-beta.2",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5",
+    "vite": "^6.3.1"
+  }
+}

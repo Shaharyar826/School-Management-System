@@ -1,0 +1,412 @@
+/* Light Theme Animations CSS for School Management System */
+
+/*
+ * This file contains animations for light mode that match those in dark mode
+ * to ensure consistent user experience across both themes
+ */
+
+/* Base Styles for Light Mode */
+html[data-theme='light'] {
+  /* Base animation properties */
+  --transition-speed-fast: 0.2s;
+  --transition-speed-normal: 0.3s;
+  --transition-speed-slow: 0.5s;
+  --transition-timing: ease;
+
+  /* Gradients for light mode */
+  --light-gradient-blue: linear-gradient(135deg, #3b82f6, #2563eb);
+  --light-gradient-green: linear-gradient(135deg, #10b981, #059669);
+  --light-gradient-yellow: linear-gradient(135deg, #f59e0b, #d97706);
+  --light-gradient-red: linear-gradient(135deg, #ef4444, #dc2626);
+  --light-gradient-purple: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+
+/* Dashboard cards and content */
+html[data-theme='light'] .dashboard-card,
+html[data-theme='light'] .bg-white.overflow-hidden.shadow.rounded-lg {
+  transition: transform 0.5s ease, box-shadow 0.3s ease, background 0.3s ease;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  background: linear-gradient(145deg, #ffffff, #f9fafb);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+html[data-theme='light'] .bg-white.overflow-hidden.shadow.rounded-lg:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(145deg, #ffffff, #f3f4f6);
+}
+
+html[data-theme='light'] .bg-white.overflow-hidden.shadow.rounded-lg:hover .flex-shrink-0 svg {
+  transform: translateY(2px);
+}
+
+html[data-theme='light'].font-medium.text-blue-600.hover:text-blue-500:hover{
+  transition: all 0.3s ease;
+}
+
+html[data-theme='light'] .font-medium.text-blue-600.hover:text-blue-500:hover {
+  transform: translateX(2px);
+}
+
+/* Dashboard card content */
+html[data-theme='light'] .bg-white.overflow-hidden.shadow.rounded-lg.p-5 {
+  padding: 1.5rem;
+  transition: padding 0.3s ease;
+}
+
+/* Dashboard card icon animations */
+html[data-theme='light'] .flex-shrink-0 svg {
+  transition: transform 0.3s ease;
+}
+
+html[data-theme='light'] .bg-white.overflow-hidden.shadow.rounded-lg:hover .flex-shrink-0 svg {
+  transform: scale(1.1);
+}
+
+/* Dashboard cards and content transitions */
+html[data-theme='light'] .dashboard-card,
+html[data-theme='light'] .bg-white.overflow-hidden.shadow.rounded-lg,
+html[data-theme='light'] .bg-white.overflow-hidden.shadow.rounded-lg.p-5 {
+  transition: all 0.3s ease;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+html[data-theme='light'] .dashboard-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Dashboard card content */
+html[data-theme='light'] .bg-white.overflow-hidden.shadow.rounded-lg .p-5 {
+  padding: 1.5rem;
+}
+
+/* Dashboard card headers and footers */
+html[data-theme='light'] .bg-gray-50.px-5.py-3 {
+  background-color: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+  transition: background-color 0.3s ease;
+}
+
+html[data-theme='light'] .bg-white.overflow-hidden.shadow.rounded-lg:hover .bg-gray-50.px-5.py-3 {
+  background-color: #f3f4f6;
+}
+
+/* Button hover animations */
+html[data-theme='light'] .school-button-primary,
+html[data-theme='light'] .school-button-secondary,
+html[data-theme='light'] .school-button-outline {
+  transition: all 0.2s ease;
+}
+
+html[data-theme='light'] .school-button-primary:hover,
+html[data-theme='light'] .school-button-secondary:hover,
+html[data-theme='light'] .school-button-outline:hover {
+  transform: translateY(-1px);
+}
+
+/* Input field focus animations */
+html[data-theme='light'] input:not([type="checkbox"]):not([type="radio"]):focus,
+html[data-theme='light'] select:focus,
+html[data-theme='light'] textarea:focus,
+html[data-theme='light'] .custom-input:focus {
+  animation: light-glow-pulse 2s infinite ease-in-out;
+}
+
+@keyframes light-glow-pulse {
+  0% {
+    box-shadow: 0 0 0 4px rgba(255, 204, 0, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 0 4px rgba(255, 204, 0, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 4px rgba(255, 204, 0, 0.1);
+  }
+}
+
+/* Link hover animations */
+html[data-theme='light'] .text-blue-600,
+html[data-theme='light'] a[class*="View all"],
+html[data-theme='light'] a[class*="View below"] {
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+html[data-theme='light'] .text-blue-600:hover,
+html[data-theme='light'] a[class*="View all"]:hover,
+html[data-theme='light'] a[class*="View below"]:hover {
+  color: #2563eb;
+  transform: translateX(2px);
+}
+
+/* Navbar link hover animations */
+html[data-theme='light'] .school-navbar-link {
+  transition: color 0.2s ease;
+}
+
+/* Sidebar item hover animations */
+html[data-theme='light'] .school-sidebar-item {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Table row hover animations */
+html[data-theme='light'] .school-table-row {
+  transition: background-color 0.15s ease;
+}
+
+/* Badge hover animations */
+html[data-theme='light'] .school-badge {
+  transition: transform 0.2s ease;
+}
+
+html[data-theme='light'] .school-badge:hover {
+  transform: scale(1.05);
+}
+
+/* Alert animations */
+html[data-theme='light'] .school-alert {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Card content transitions */
+html[data-theme='light'] .bg-white.overflow-hidden.shadow.rounded-lg .p-5 {
+  transition: padding 0.3s ease;
+}
+
+/* Card icon containers */
+html[data-theme='light'] .flex-shrink-0.bg-purple-500.rounded-md.p-3,
+html[data-theme='light'] .flex-shrink-0.bg-blue-500.rounded-md.p-3,
+html[data-theme='light'] .flex-shrink-0.bg-green-500.rounded-md.p-3,
+html[data-theme='light'] .flex-shrink-0.bg-yellow-500.rounded-md.p-3,
+html[data-theme='light'] .flex-shrink-0.bg-red-500.rounded-md.p-3 {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Specific styling for each icon container color */
+html[data-theme='light'] .flex-shrink-0.bg-blue-500.rounded-md.p-3 {
+  background: var(--light-gradient-blue);
+}
+
+html[data-theme='light'] .flex-shrink-0.bg-green-500.rounded-md.p-3 {
+  background: var(--light-gradient-green);
+}
+
+html[data-theme='light'] .flex-shrink-0.bg-yellow-500.rounded-md.p-3,
+html[data-theme='light'] .flex-shrink-0.bg-red-500.rounded-md.p-3 {
+  background: var(--light-gradient-red);
+}
+
+html[data-theme='light'] .flex-shrink-0.bg-purple-500.rounded-md.p-3 {
+  background: var(--light-gradient-purple);
+}
+
+html[data-theme='light'] .bg-white.overflow-hidden.shadow.rounded-lg:hover .flex-shrink-0.bg-purple-500.rounded-md.p-3,
+html[data-theme='light'] .bg-white.overflow-hidden.shadow.rounded-lg:hover .flex-shrink-0.bg-blue-500.rounded-md.p-3,
+html[data-theme='light'] .bg-white.overflow-hidden.shadow.rounded-lg:hover .flex-shrink-0.bg-green-500.rounded-md.p-3,
+html[data-theme='light'] .bg-white.overflow-hidden.shadow.rounded-lg:hover .flex-shrink-0.bg-yellow-500.rounded-md.p-3,
+html[data-theme='light'] .bg-white.overflow-hidden.shadow.rounded-lg:hover .flex-shrink-0.bg-red-500.rounded-md.p-3 {
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+html[data-theme='light'] .flex-shrink-0 svg {
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+/* html[data-theme='light'] .bg-white.shadow.overflow-hidden.sm:rounded-md.h-full{
+  transition: all 0.3s ease;
+}
+
+html[data-theme='light'] .bg-white.shadow.overflow-hidden.sm:rounded-md.h-full:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+} */
+
+
+html[data-theme='light'] .bg-white.shadow.rounded-lg, 
+html[data-theme='light'] .bg-white.shadow.sm\:rounded-lg, 
+html[data-theme='light'] .bg-white.shadow.overflow-hidden.sm\:rounded-lg, 
+html[data-theme='light'] .bg-white.shadow.overflow-hidden.sm\:rounded-md{
+  transition: transform 0.5s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+html[data-theme='light'] .bg-white.shadow.rounded-lg:hover, 
+html[data-theme='light'] .bg-white.shadow.sm\:rounded-lg:hover, 
+html[data-theme='light'] .bg-white.shadow.overflow-hidden.sm\:rounded-lg:hover, 
+html[data-theme='light'] .bg-white.shadow.overflow-hidden.sm\:rounded-md:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Dropdown menu animations */
+html[data-theme='light'] .dropdown-menu,
+html[data-theme='light'] .navbar-dropdown {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+html[data-theme='light'] .dropdown-item,
+html[data-theme='light'] .dropdown-menu-fix {
+  transition: background-color 0.2s ease;
+}
+
+/* Footer link animations */
+html[data-theme='light'] .school-footer-link {
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+html[data-theme='light'] .school-footer-link:hover {
+  color: #2563eb;
+  transform: translateX(2px);
+}
+
+/* Welcome section styling */
+html[data-theme='light'] .mt-4.bg-white.shadow.rounded-lg.p-6,
+html[data-theme='light'] .welcome-section {
+  background: linear-gradient(to right, #3b82f6, #2563eb);
+  border-radius: 0.75rem;
+  border: none;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+html[data-theme='light'] .mt-4.bg-white.shadow.rounded-lg.p-6:hover,
+html[data-theme='light'] .welcome-section:hover {
+  box-shadow: 0 6px 12px rgba(37, 99, 235, 0.3);
+  transform: translateY(-5px);
+}
+
+html[data-theme='light'] .mt-4.bg-white.shadow.rounded-lg.p-6 h1,
+html[data-theme='light'] .mt-4.bg-white.shadow.rounded-lg.p-6 h2,
+html[data-theme='light'] .mt-4.bg-white.shadow.rounded-lg.p-6 h3,
+html[data-theme='light'] .welcome-section h1,
+html[data-theme='light'] .welcome-section h2,
+html[data-theme='light'] .welcome-section h3 {
+  color: white;
+  font-weight: 600;
+}
+
+html[data-theme='light'] .mt-4.bg-white.shadow.rounded-lg.p-6 p,
+html[data-theme='light'] .welcome-section p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Landing page specific animations */
+
+/* Card hover effects on landing page */
+html[data-theme='light'] .landing-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+html[data-theme='light'] .landing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Button hover effects on landing page */
+html[data-theme='light'] .landing-button {
+  transition: all 0.2s ease;
+}
+
+html[data-theme='light'] .landing-button:hover {
+  transform: scale(1.05);
+}
+
+/* Stats counter animations */
+html[data-theme='light'] .stats-counter {
+  transition: transform 0.2s ease;
+}
+
+html[data-theme='light'] .stats-counter:hover {
+  transform: translateY(-5px) scale(1.05);
+}
+
+/* Scroll indicator animation */
+@keyframes scroll-indicator-light {
+  0% {
+    opacity: 0.2;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 0.2;
+    transform: translateY(0);
+  }
+}
+
+html[data-theme='light'] .scroll-indicator {
+  animation: scroll-indicator-light 2s infinite ease-in-out;
+}
+
+/* Icon animations */
+html[data-theme='light'] .animate-icon {
+  transition: transform 0.3s ease;
+}
+
+html[data-theme='light'] .animate-icon:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* CTA section animations */
+html[data-theme='light'] .cta-button {
+  transition: all 0.3s ease;
+}
+
+html[data-theme='light'] .cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Feature card animations */
+html[data-theme='light'] .feature-card {
+  transition: all 0.3s ease;
+}
+
+html[data-theme='light'] .feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Dashboard text styling */
+html[data-theme='light'] .text-sm.font-medium.text-gray-500 {
+  color: #6b7280;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+html[data-theme='light'] .text-lg.font-medium.text-gray-900 {
+  color: #111827;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* Dashboard section headers */
+html[data-theme='light'] h3.text-lg.font-medium.text-gray-900 {
+  color: #111827;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Reset Database button */
+html[data-theme='light'] .bg-red-600.hover\:bg-red-700 {
+  background: linear-gradient(to right, #ef4444, #dc2626);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(220, 38, 38, 0.2);
+}
+
+html[data-theme='light'] .bg-red-600.hover\:bg-red-700:hover {
+  box-shadow: 0 4px 6px rgba(220, 38, 38, 0.3);
+  transform: translateY(-1px);
+}

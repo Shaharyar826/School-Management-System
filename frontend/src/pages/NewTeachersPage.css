@@ -1,0 +1,100 @@
+/* Dark mode styles for NewTeachersPage */
+
+/* Page title */
+html[data-theme='dark'] h1.text-2xl.font-semibold.text-gray-900 {
+  color: #f9fafb;
+}
+
+/* Search input */
+html[data-theme='dark'] input.shadow-sm.focus\:ring-blue-500.focus\:border-blue-500 {
+  background-color: #374151;
+  border-color: #4b5563;
+  color: #f9fafb;
+}
+
+html[data-theme='dark'] input.shadow-sm.focus\:ring-blue-500.focus\:border-blue-500::placeholder {
+  color: #9ca3af;
+}
+
+/* Table container */
+html[data-theme='dark'] .bg-white.shadow {
+  background-color: #1f2937 !important;
+  border: 1px solid #374151;
+}
+
+/* Table */
+html[data-theme='dark'] table {
+  border-color: #374151;
+}
+
+/* Table header */
+html[data-theme='dark'] thead {
+  background-color: #374151 !important;
+}
+
+html[data-theme='dark'] th {
+  color: #d1d5db !important;
+}
+
+/* Table body */
+html[data-theme='dark'] tbody {
+  background-color: #1f2937 !important;
+  border-color: #374151;
+}
+
+/* Table rows */
+html[data-theme='dark'] tbody tr {
+  background-color: #1f2937 !important;
+}
+
+html[data-theme='dark'] tbody tr:hover {
+  background-color: #374151 !important;
+}
+
+/* Table text */
+html[data-theme='dark'] .text-sm.font-medium.text-gray-900,
+html[data-theme='dark'] .text-sm.text-gray-900 {
+  color: #f9fafb !important;
+}
+
+html[data-theme='dark'] .text-sm.text-gray-500 {
+  color: #9ca3af !important;
+}
+
+/* No teachers found message */
+html[data-theme='dark'] .bg-white.shadow.overflow-hidden.sm\:rounded-lg.p-6.text-center.text-gray-500 {
+  background-color: #1f2937;
+  color: #9ca3af;
+  border: 1px solid #374151;
+}
+
+/* Modal */
+html[data-theme='dark'] .inline-block.align-bottom.bg-white.rounded-lg {
+  background-color: #1f2937;
+}
+
+html[data-theme='dark'] .bg-white.px-4.pt-5.pb-4 {
+  background-color: #1f2937;
+}
+
+html[data-theme='dark'] .bg-gray-50.px-4.py-3 {
+  background-color: #374151;
+}
+
+html[data-theme='dark'] h3.text-lg.leading-6.font-medium.text-gray-900 {
+  color: #f9fafb;
+}
+
+html[data-theme='dark'] p.text-sm.text-gray-500 {
+  color: #9ca3af;
+}
+
+html[data-theme='dark'] .bg-white.text-base.font-medium.text-gray-700 {
+  background-color: #1f2937;
+  color: #d1d5db;
+  border-color: #4b5563;
+}
+
+html[data-theme='dark'] .bg-white.text-base.font-medium.text-gray-700:hover {
+  background-color: #374151;
+}

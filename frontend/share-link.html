@@ -1,0 +1,34 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Your Shareable Link</title>
+      <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; }
+        .url-box { background: #f0f0f0; padding: 15px; border-radius: 5px; margin: 20px 0; }
+        .url { font-size: 18px; word-break: break-all; color: #0066cc; }
+        .copy-btn { background: #4CAF50; color: white; border: none; padding: 10px 15px;
+                   border-radius: 4px; cursor: pointer; margin-top: 10px; }
+        .copy-btn:hover { background: #45a049; }
+        h1 { color: #333; }
+      </style>
+    </head>
+    <body>
+      <h1>Your Website Shareable Link</h1>
+      <p>Share this link with your friends to let them see your website:</p>
+      <div class="url-box">
+        <div class="url" id="url">https://137d-182-190-208-216.ngrok-free.app</div>
+        <button class="copy-btn" onclick="copyUrl()">Copy Link</button>
+      </div>
+      <p><strong>Note:</strong> This link will only work while your ngrok tunnel is running.</p>
+      <script>
+        function copyUrl() {
+          const urlText = document.getElementById('url').innerText;
+          navigator.clipboard.writeText(urlText)
+            .then(() => alert('Link copied to clipboard!'))
+            .catch(err => console.error('Error copying text: ', err));
+        }
+      </script>
+    </body>
+    </html>
+    

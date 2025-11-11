@@ -1,0 +1,513 @@
+/* Global Dark Theme - Modern Professional UI for all pages */
+
+/* Base dark theme colors */
+:root {
+  --global-dark-bg-primary: #111827;
+  --global-dark-bg-secondary: #1f2937;
+  --global-dark-bg-tertiary: #374151;
+  --global-dark-text-primary: #f9fafb;
+  --global-dark-text-secondary: #e5e7eb;
+  --global-dark-text-muted: #9ca3af;
+  --global-dark-border: #4b5563;
+  --global-dark-card-bg: #1f2937;
+  --global-dark-card-footer: #111827;
+
+  /* Accent colors */
+  --global-accent-blue: #3b82f6;
+  --global-accent-green: #10b981;
+  --global-accent-yellow: #f59e0b;
+  --global-accent-red: #ef4444;
+  --global-accent-purple: #8b5cf6;
+
+  /* Gradients */
+  --global-gradient-blue: linear-gradient(135deg, #3b82f6, #2563eb);
+  --global-gradient-green: linear-gradient(135deg, #10b981, #059669);
+  --global-gradient-yellow: linear-gradient(135deg, #f59e0b, #d97706);
+  --global-gradient-red: linear-gradient(135deg, #ef4444, #dc2626);
+  --global-gradient-purple: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+
+/* Apply dark theme styles when data-theme="dark" is set */
+html[data-theme='dark'] body {
+  background-color: var(--global-dark-bg-primary);
+  color: var(--global-dark-text-primary);
+}
+
+/* Page container */
+html[data-theme='dark'] .py-6 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* ===== PUBLIC WEBSITE DARK MODE STYLES ===== */
+
+/* Landing Page Sections */
+html[data-theme='dark'] .landing-page .py-20.bg-white {
+  background-color: var(--global-dark-bg-primary);
+}
+
+html[data-theme='dark'] .landing-page .py-20.bg-gray-50 {
+  background-color: var(--global-dark-bg-secondary);
+}
+
+/* Section headings */
+html[data-theme='dark'] .text-school-navy-dark {
+  color: var(--global-dark-text-primary) !important;
+}
+
+html[data-theme='dark'] .text-gray-600 {
+  color: var(--global-dark-text-muted) !important;
+}
+
+html[data-theme='dark'] .text-gray-500 {
+  color: var(--global-dark-text-muted) !important;
+}
+
+/* Cards and containers */
+html[data-theme='dark'] .bg-gray-50 {
+  background-color: var(--global-dark-bg-tertiary) !important;
+}
+
+html[data-theme='dark'] .bg-white {
+  background-color: var(--global-dark-card-bg) !important;
+}
+
+/* About Section */
+html[data-theme='dark'] #about {
+  background-color: var(--global-dark-bg-secondary);
+}
+
+html[data-theme='dark'] #about .bg-white {
+  background-color: var(--global-dark-card-bg);
+  border: 1px solid var(--global-dark-border);
+}
+
+/* Featured Teachers Section */
+html[data-theme='dark'] .bg-gray-50.rounded-lg {
+  background-color: var(--global-dark-card-bg);
+  border: 1px solid var(--global-dark-border);
+}
+
+/* Events & Notices Section */
+html[data-theme='dark'] .bg-white.rounded-lg {
+  background-color: var(--global-dark-card-bg);
+  border: 1px solid var(--global-dark-border);
+}
+
+/* Testimonials Section */
+html[data-theme='dark'] .bg-white.rounded-lg.overflow-hidden {
+  background-color: var(--global-dark-card-bg);
+  border: 1px solid var(--global-dark-border);
+}
+
+/* CTA Section */
+html[data-theme='dark'] .bg-white.rounded-lg.shadow-xl {
+  background-color: var(--global-dark-card-bg);
+  border: 1px solid var(--global-dark-border);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* Priority badges */
+html[data-theme='dark'] .bg-red-100 {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #fca5a5;
+}
+
+html[data-theme='dark'] .bg-yellow-100 {
+  background-color: rgba(245, 158, 11, 0.2);
+  color: #fcd34d;
+}
+
+html[data-theme='dark'] .bg-green-100 {
+  background-color: rgba(16, 185, 129, 0.2);
+  color: #6ee7b7;
+}
+
+html[data-theme='dark'] .bg-gray-100 {
+  background-color: rgba(156, 163, 175, 0.2);
+  color: #d1d5db;
+}
+
+/* Text colors for priority badges */
+html[data-theme='dark'] .text-red-800 {
+  color: #fca5a5 !important;
+}
+
+html[data-theme='dark'] .text-yellow-800 {
+  color: #fcd34d !important;
+}
+
+html[data-theme='dark'] .text-green-800 {
+  color: #6ee7b7 !important;
+}
+
+html[data-theme='dark'] .text-gray-800 {
+  color: #d1d5db !important;
+}
+
+/* Page headings */
+html[data-theme='dark'] h1.text-2xl.font-semibold.text-gray-900,
+html[data-theme='dark'] h2.text-lg.font-medium.text-gray-900,
+html[data-theme='dark'] h3.text-lg.font-medium.text-gray-900 {
+  color: var(--global-dark-text-primary);
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+/* About Page specific styles */
+html[data-theme='dark'] .about-page .bg-school-navy {
+  background-color: var(--global-dark-bg-primary);
+}
+
+html[data-theme='dark'] .about-page .text-white {
+  color: var(--global-dark-text-primary);
+}
+
+html[data-theme='dark'] .about-page .text-gray-200 {
+  color: var(--global-dark-text-secondary);
+}
+
+/* Public pages general styles */
+html[data-theme='dark'] .min-h-screen.bg-gray-50 {
+  background-color: var(--global-dark-bg-primary);
+}
+
+html[data-theme='dark'] .bg-gray-50.py-20 {
+  background-color: var(--global-dark-bg-secondary);
+}
+
+/* Navigation styles for public pages */
+html[data-theme='dark'] .navbar\:hidden .bg-white {
+  background-color: var(--global-dark-card-bg);
+  border: 1px solid var(--global-dark-border);
+}
+
+html[data-theme='dark'] .text-school-navy {
+  color: var(--global-dark-text-primary);
+}
+
+html[data-theme='dark'] .hover\:bg-school-gray:hover {
+  background-color: var(--global-dark-bg-tertiary);
+}
+
+/* Mobile menu specific styles */
+html[data-theme='dark'] .navbar\:hidden .px-2.pt-2.pb-3.space-y-1.bg-white.shadow-lg.rounded-b-lg {
+  background-color: var(--global-dark-card-bg);
+  border: 1px solid var(--global-dark-border);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+html[data-theme='dark'] .navbar\:hidden .text-school-navy {
+  color: var(--global-dark-text-primary);
+}
+
+html[data-theme='dark'] .navbar\:hidden .hover\:text-school-navy-dark:hover {
+  color: var(--global-accent-yellow);
+}
+
+html[data-theme='dark'] .navbar\:hidden .bg-school-yellow-light {
+  background-color: var(--global-accent-yellow);
+}
+
+html[data-theme='dark'] .navbar\:hidden .text-school-navy-dark {
+  color: var(--global-dark-bg-primary);
+}
+
+/* Error page styles */
+html[data-theme='dark'] .min-h-screen.flex.items-center.justify-center.bg-gray-50 {
+  background-color: var(--global-dark-bg-primary);
+}
+
+html[data-theme='dark'] .text-gray-900 {
+  color: var(--global-dark-text-primary);
+}
+
+html[data-theme='dark'] .text-gray-600 {
+  color: var(--global-dark-text-muted);
+}
+
+/* Loading state styles */
+html[data-theme='dark'] .min-h-screen.bg-white.dark\:bg-gray-900 {
+  background-color: var(--global-dark-bg-primary);
+}
+
+/* Gallery and other public pages */
+html[data-theme='dark'] .gallery-page .bg-white {
+  background-color: var(--global-dark-card-bg);
+  border: 1px solid var(--global-dark-border);
+}
+
+html[data-theme='dark'] .events-page .bg-white {
+  background-color: var(--global-dark-card-bg);
+  border: 1px solid var(--global-dark-border);
+}
+
+html[data-theme='dark'] .faculty-page .bg-white {
+  background-color: var(--global-dark-card-bg);
+  border: 1px solid var(--global-dark-border);
+}
+
+html[data-theme='dark'] .academics-page .bg-white {
+  background-color: var(--global-dark-card-bg);
+  border: 1px solid var(--global-dark-border);
+}
+
+html[data-theme='dark'] .admissions-page .bg-white {
+  background-color: var(--global-dark-card-bg);
+  border: 1px solid var(--global-dark-border);
+}
+
+html[data-theme='dark'] .contact-page .bg-white {
+  background-color: var(--global-dark-card-bg);
+  border: 1px solid var(--global-dark-border);
+}
+
+/* Form styles for public pages */
+html[data-theme='dark'] .bg-white.shadow-md.rounded-lg {
+  background-color: var(--global-dark-card-bg);
+  border: 1px solid var(--global-dark-border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Button hover states */
+html[data-theme='dark'] .hover\:bg-school-navy:hover {
+  background-color: var(--global-dark-bg-tertiary);
+}
+
+/* Link styles */
+html[data-theme='dark'] .text-school-navy.hover\:text-school-navy-dark:hover {
+  color: var(--global-accent-yellow);
+}
+
+/* Stats section in landing page */
+html[data-theme='dark'] .py-16.bg-school-navy {
+  background-color: var(--global-dark-bg-primary);
+  border-top: 1px solid var(--global-dark-border);
+  border-bottom: 1px solid var(--global-dark-border);
+}
+
+/* Section headers with bottom border */
+html[data-theme='dark'] h3.text-lg.font-medium.text-gray-900 {
+  border-bottom: 2px solid var(--global-dark-border);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Cards */
+html[data-theme='dark'] .bg-white.shadow.rounded-lg,
+html[data-theme='dark'] .bg-white.shadow.sm\:rounded-lg,
+html[data-theme='dark'] .bg-white.shadow.overflow-hidden.sm\:rounded-lg,
+html[data-theme='dark'] .bg-white.shadow.overflow-hidden.sm\:rounded-md {
+  background: linear-gradient(145deg, #1f2937, #1a202c);
+  border: 1px solid var(--global-dark-border);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+html[data-theme='dark'] .bg-white.shadow.rounded-lg:hover,
+html[data-theme='dark'] .bg-white.shadow.sm\:rounded-lg:hover,
+html[data-theme='dark'] .bg-white.shadow.overflow-hidden.sm\:rounded-lg:hover,
+html[data-theme='dark'] .bg-white.shadow.overflow-hidden.sm\:rounded-md:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(145deg, #1f2937, #111827);
+}
+
+/* Card content */
+html[data-theme='dark'] .px-4.py-5.sm\:px-6,
+html[data-theme='dark'] .px-4.py-5.border-b.border-gray-200.sm\:px-6 {
+  border-color: var(--global-dark-border);
+}
+
+/* Card headers */
+html[data-theme='dark'] .bg-gray-50.px-4.py-5.sm\:grid.sm\:grid-cols-3.sm\:gap-4.sm\:px-6 {
+  background-color: var(--global-dark-bg-tertiary);
+  border-bottom: 1px solid var(--global-dark-border);
+}
+
+/* Card footers */
+html[data-theme='dark'] .bg-gray-50.px-4.py-4.sm\:px-6,
+html[data-theme='dark'] .bg-gray-50.px-4.py-3.sm\:px-6 {
+  background-color: var(--global-dark-card-footer);
+  border-top: 1px solid var(--global-dark-border);
+}
+
+/* Text colors */
+html[data-theme='dark'] .text-gray-900 {
+  color: var(--global-dark-text-primary);
+}
+
+html[data-theme='dark'] .text-gray-700 {
+  color: var(--global-dark-text-secondary);
+}
+
+html[data-theme='dark'] .text-gray-500 {
+  color: var(--global-dark-text-muted);
+}
+
+/* Links */
+html[data-theme='dark'] .text-blue-600 {
+  color: var(--global-accent-blue);
+  transition: color 0.2s ease;
+}
+
+html[data-theme='dark'] .text-blue-600:hover {
+  color: #60a5fa;
+  text-decoration: underline;
+}
+
+/* Buttons */
+html[data-theme='dark'] .inline-flex.items-center.px-4.py-2.border.border-transparent.text-sm.font-medium.rounded-md.shadow-sm.text-white.bg-blue-600 {
+  background: var(--global-gradient-blue);
+  border: none;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+html[data-theme='dark'] .inline-flex.items-center.px-4.py-2.border.border-transparent.text-sm.font-medium.rounded-md.shadow-sm.text-white.bg-blue-600:hover {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transform: translateY(-1px);
+}
+
+/* Select All Classes/Students button */
+html[data-theme='dark'] button.px-3.py-1.text-sm.font-medium.rounded-md.bg-blue-100.text-blue-700,
+html[data-theme='dark'] button.px-3.py-1.text-sm.font-medium.rounded-md.bg-gray-100.text-gray-700 {
+  background-color: var(--global-dark-bg-tertiary);
+  color: var(--global-accent-blue);
+  border: 1px solid var(--global-dark-border);
+  transition: all 0.3s ease;
+}
+
+html[data-theme='dark'] button.px-3.py-1.text-sm.font-medium.rounded-md.bg-blue-100.text-blue-700:hover,
+html[data-theme='dark'] button.px-3.py-1.text-sm.font-medium.rounded-md.bg-gray-100.text-gray-700:hover {
+  background-color: var(--global-dark-bg-primary);
+  color: #60a5fa;
+}
+
+/* Green buttons */
+html[data-theme='dark'] .inline-flex.items-center.px-4.py-2.border.border-transparent.text-sm.font-medium.rounded-md.shadow-sm.text-white.bg-green-600 {
+  background: var(--global-gradient-green);
+  border: none;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+html[data-theme='dark'] .inline-flex.items-center.px-4.py-2.border.border-transparent.text-sm.font-medium.rounded-md.shadow-sm.text-white.bg-green-600:hover {
+  background: linear-gradient(135deg, #059669, #047857);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transform: translateY(-1px);
+}
+
+/* Red buttons */
+html[data-theme='dark'] .inline-flex.items-center.px-4.py-2.border.border-transparent.text-sm.font-medium.rounded-md.shadow-sm.text-white.bg-red-600 {
+  background: var(--global-gradient-red);
+  border: none;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+html[data-theme='dark'] .inline-flex.items-center.px-4.py-2.border.border-transparent.text-sm.font-medium.rounded-md.shadow-sm.text-white.bg-red-600:hover {
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transform: translateY(-1px);
+}
+
+/* Tables */
+html[data-theme='dark'] .min-w-full.divide-y.divide-gray-200 {
+  border-color: var(--global-dark-border);
+}
+
+html[data-theme='dark'] .bg-gray-50 {
+  background-color: var(--global-dark-bg-tertiary);
+}
+
+html[data-theme='dark'] .px-6.py-3.text-left.text-xs.font-medium.text-gray-500.uppercase.tracking-wider {
+  color: var(--global-dark-text-muted);
+  border-bottom: 1px solid var(--global-dark-border);
+}
+
+html[data-theme='dark'] .bg-white.divide-y.divide-gray-200 {
+  background-color: var(--global-dark-bg-secondary);
+  border-color: var(--global-dark-border);
+}
+
+html[data-theme='dark'] .px-6.py-4.whitespace-nowrap.text-sm.text-gray-900 {
+  color: var(--global-dark-text-primary);
+}
+
+html[data-theme='dark'] .px-6.py-4.whitespace-nowrap.text-sm.text-gray-500 {
+  color: var(--global-dark-text-muted);
+}
+
+/* Table row hover */
+html[data-theme='dark'] .bg-white.divide-y.divide-gray-200 tr:hover {
+  background-color: var(--global-dark-bg-tertiary);
+}
+
+/* Form inputs */
+html[data-theme='dark'] .mt-1.block.w-full.shadow-sm.sm\:text-sm.border-gray-300.rounded-md,
+html[data-theme='dark'] .shadow-sm.focus\:ring-blue-500.focus\:border-blue-500.block.w-full.sm\:text-sm.border-gray-300.rounded-md {
+  background-color: var(--global-dark-bg-tertiary);
+  border: 1px solid var(--global-dark-border);
+  color: var(--global-dark-text-primary);
+}
+
+html[data-theme='dark'] .mt-1.block.w-full.shadow-sm.sm\:text-sm.border-gray-300.rounded-md:focus,
+html[data-theme='dark'] .shadow-sm.focus\:ring-blue-500.focus\:border-blue-500.block.w-full.sm\:text-sm.border-gray-300.rounded-md:focus {
+  border-color: var(--global-accent-blue);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+/* Form labels */
+html[data-theme='dark'] .block.text-sm.font-medium.text-gray-700 {
+  color: var(--global-dark-text-secondary);
+}
+
+/* Pagination */
+html[data-theme='dark'] .bg-white.px-4.py-3.flex.items-center.justify-between.border-t.border-gray-200.sm\:px-6 {
+  background-color: var(--global-dark-bg-secondary);
+  border-color: var(--global-dark-border);
+}
+
+html[data-theme='dark'] .relative.inline-flex.items-center.px-4.py-2.border.border-gray-300.text-sm.font-medium.rounded-md.text-gray-700.bg-white {
+  background-color: var(--global-dark-bg-tertiary);
+  border-color: var(--global-dark-border);
+  color: var(--global-dark-text-secondary);
+}
+
+html[data-theme='dark'] .relative.inline-flex.items-center.px-4.py-2.border.border-gray-300.text-sm.font-medium.rounded-md.text-gray-700.bg-white:hover {
+  background-color: var(--global-dark-bg-primary);
+}
+
+/* Active pagination */
+html[data-theme='dark'] .relative.inline-flex.items-center.px-4.py-2.border.border-blue-500.text-sm.font-medium.rounded-md.text-white.bg-blue-600 {
+  background: var(--global-gradient-blue);
+  border-color: var(--global-accent-blue);
+}
+
+/* Empty states */
+html[data-theme='dark'] .text-center.py-10.px-6.text-gray-500 {
+  color: var(--global-dark-text-muted);
+  background-color: var(--global-dark-bg-secondary);
+  border: 1px dashed var(--global-dark-border);
+  border-radius: 0.5rem;
+}
+
+/* Checkboxes */
+html[data-theme='dark'] .h-4.w-4.text-blue-600.focus\:ring-blue-500.border-gray-300.rounded {
+  background-color: var(--global-dark-bg-tertiary);
+  border-color: var(--global-dark-border);
+}
+
+html[data-theme='dark'] .h-4.w-4.text-blue-600.focus\:ring-blue-500.border-gray-300.rounded:checked {
+  background-color: var(--global-accent-blue);
+  border-color: var(--global-accent-blue);
+}
+
+/* Checkbox labels */
+html[data-theme='dark'] .ml-2.text-sm.text-gray-700 {
+  color: var(--global-dark-text-secondary);
+}

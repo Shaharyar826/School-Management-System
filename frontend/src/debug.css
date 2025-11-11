@@ -1,0 +1,9 @@
+/* Debug CSS to identify layout issues */
+/* * {
+  outline: 1px solid rgba(255, 0, 0, 0.2);
+} */
+
+.debug-z-index {
+  position: relative;
+  z-index: 9999 !important;
+}

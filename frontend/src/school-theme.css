@@ -1,0 +1,311 @@
+/* School Theme CSS - AI Based School Tando Jam */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Base Styles */
+body {
+  @apply font-sans text-school-navy-dark;
+  background-color: #f8f9fa;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-heading font-bold;
+}
+
+/* Header/Navbar Styles */
+.school-navbar {
+  @apply bg-gradient-to-r from-school-yellow to-school-orange shadow-md;
+}
+
+.school-navbar-brand {
+  @apply text-school-navy-dark font-heading font-bold text-xl;
+}
+
+.school-navbar-link {
+  @apply text-school-navy-dark hover:text-school-navy font-medium transition-colors duration-200;
+  @apply px-2 py-1 whitespace-nowrap text-sm;
+}
+
+.school-navbar-button {
+  @apply bg-school-navy text-white hover:bg-school-navy-dark transition-colors duration-200 font-medium;
+}
+
+/* Navbar layout improvements */
+.school-navbar .max-w-7xl {
+  @apply w-full;
+}
+
+.school-navbar .flex-1 {
+  @apply overflow-hidden;
+}
+
+.school-navbar .overflow-x-auto {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.school-navbar .overflow-x-auto::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.navbar-items-container {
+  @apply flex-grow;
+  max-width: calc(100% - 200px);
+}
+
+/* Sidebar Styles */
+.school-sidebar {
+  @apply bg-school-navy text-white;
+}
+
+.school-sidebar-header {
+  @apply bg-school-navy-dark text-white font-bold;
+}
+
+.school-sidebar-item {
+  @apply flex items-center p-2 rounded-md transition-colors duration-200;
+}
+
+.school-sidebar-item-active {
+  @apply bg-school-yellow text-school-navy-dark;
+}
+
+.school-sidebar-item-inactive {
+  @apply hover:bg-school-navy-light text-white;
+}
+
+.school-sidebar-icon {
+  @apply text-school-yellow;
+}
+
+/* Change icon color when sidebar item is active */
+.school-sidebar-item-active .school-sidebar-icon {
+  @apply text-school-navy-dark;
+}
+
+/* Content Area Styles */
+.school-content {
+  @apply bg-white rounded-lg shadow-md p-6;
+}
+
+.school-heading {
+  @apply text-school-navy-dark font-bold mb-4;
+}
+
+.school-subheading {
+  @apply text-school-navy font-medium mb-2;
+}
+
+.school-text {
+  @apply text-gray-600;
+}
+
+/* Button Styles */
+.school-button {
+  @apply px-4 py-2 rounded-md font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+.school-button-primary {
+  @apply bg-school-yellow text-school-navy-dark hover:bg-school-orange focus:ring-school-yellow;
+}
+
+.school-button-secondary {
+  @apply bg-school-navy text-white hover:bg-school-navy-dark focus:ring-school-navy;
+}
+
+.school-button-outline {
+  @apply border border-school-yellow text-school-navy-dark hover:bg-school-yellow hover:text-school-navy-dark focus:ring-school-yellow;
+}
+
+/* Input Field Styles */
+.school-input {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md shadow-input transition-all duration-200;
+  @apply focus:border-school-yellow focus:shadow-input-focus focus:outline-none;
+  @apply bg-school-gray-light text-school-navy-dark placeholder-gray-400;
+}
+
+.school-input-label {
+  @apply block text-sm font-medium text-school-navy mb-1;
+}
+
+.school-input-group {
+  @apply mb-4;
+}
+
+/* Card Styles */
+.school-card {
+  @apply bg-white rounded-lg shadow-md overflow-hidden border border-gray-200;
+}
+
+.school-card-header {
+  @apply px-4 py-3 bg-school-gray-light border-b border-gray-200;
+}
+
+.school-card-body {
+  @apply p-4;
+}
+
+.school-card-footer {
+  @apply px-4 py-3 bg-school-gray-light border-t border-gray-200;
+}
+
+/* Table Styles */
+.school-table {
+  @apply min-w-full divide-y divide-gray-200;
+}
+
+.school-table-header {
+  @apply bg-school-gray-light;
+}
+
+.school-table-header-cell {
+  @apply px-6 py-3 text-left text-xs font-medium text-school-navy-dark uppercase tracking-wider;
+}
+
+.school-table-row {
+  @apply bg-white hover:bg-school-gray-light transition-colors duration-150;
+}
+
+.school-table-cell {
+  @apply px-6 py-4 whitespace-nowrap text-sm text-gray-600;
+}
+
+/* Badge Styles */
+.school-badge {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.school-badge-yellow {
+  @apply bg-school-yellow bg-opacity-20 text-school-yellow-dark;
+}
+
+.school-badge-orange {
+  @apply bg-school-orange bg-opacity-20 text-school-orange-dark;
+}
+
+.school-badge-navy {
+  @apply bg-school-navy bg-opacity-20 text-school-navy-dark;
+}
+
+/* Alert Styles */
+.school-alert {
+  @apply p-4 rounded-md mb-4;
+}
+
+.school-alert-success {
+  @apply bg-green-100 text-green-800;
+}
+
+.school-alert-warning {
+  @apply bg-school-yellow bg-opacity-20 text-school-yellow-dark;
+}
+
+.school-alert-error {
+  @apply bg-red-100 text-red-800;
+}
+
+.school-alert-info {
+  @apply bg-blue-100 text-blue-800;
+}
+
+/* Footer Styles */
+.school-footer {
+  @apply bg-school-navy text-white py-8;
+}
+
+.school-footer-heading {
+  @apply text-lg font-semibold mb-4 text-white;
+}
+
+.school-footer-link {
+  @apply text-gray-300 hover:text-school-yellow transition-colors duration-200;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-school-gray-light;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-school-navy-light rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-school-navy;
+}
+
+/* Override input glow effect */
+input:not([type="checkbox"]):not([type="radio"]):focus,
+select:focus,
+textarea:focus,
+.custom-input:focus {
+  @apply border-school-yellow;
+  box-shadow: 0 0 0 4px rgba(255, 204, 0, 0.2);
+  animation: school-glow-pulse 2s infinite ease-in-out;
+}
+
+@keyframes school-glow-pulse {
+  0% {
+    box-shadow: 0 0 0 4px rgba(255, 204, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 0 4px rgba(255, 204, 0, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 4px rgba(255, 204, 0, 0.2);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1280px) {
+  .school-navbar-link {
+    @apply px-1.5 py-1;
+    font-size: 0.875rem;
+  }
+
+  .school-navbar .max-w-120px {
+    max-width: 100px;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .school-navbar-link {
+    @apply px-1 py-1;
+    font-size: 0.8125rem;
+  }
+
+  .school-button {
+    @apply px-3 py-1.5;
+    font-size: 0.8125rem;
+  }
+
+  .school-navbar .space-x-6 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1rem * var(--tw-space-x-reverse));
+    margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+}
+
+@media (max-width: 1172px) {
+  .school-navbar .space-x-6 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0.75rem * var(--tw-space-x-reverse));
+    margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+}
+
+@media (max-width: 640px) {
+  .school-navbar {
+    @apply px-4;
+  }
+
+  .school-content {
+    @apply p-4;
+  }
+}
